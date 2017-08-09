@@ -7,6 +7,7 @@
     "start": "node ./webpack/webpack_devServer.js",
     "build": "webpack --config ./webpack/webpack.base.config.js",
     "preview": "http-server ./dist -p 3001 -c-1 -o",
+    "deploy": "webpack --config ./webpack/webpack.base.config.js && netlify deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
