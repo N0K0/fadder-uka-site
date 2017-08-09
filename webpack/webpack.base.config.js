@@ -3,6 +3,13 @@ const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 const precss = require('precss')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+
+const extractSass = new ExtractTextPlugin({
+  filename: "[name].[contenthash].css",
+  disable: process.env.NODE_ENV === "development",
+})
+
 
 module.exports = {
   entry: [
@@ -27,13 +34,15 @@ module.exports = {
       loader: 'babel-loader',
     }, {
       test: /\.scss$/,
-      use: [{
-        loader: 'style-loader', // creates style nodes from JS strings
-      }, {
-        loader: 'css-loader?modules&importLoaders=1&localIdentName=[hash:base64:8]', // translates CSS into CommonJS
-      }, {
-        loader: 'sass-loader', // compiles Sass to CSS
-      }],
+      use: extractSass.extract({
+        use: [{
+          loader: "css-loader"
+        }, {
+          loader: "sass-loader"
+        }],
+        // use style-loader in development
+        fallback: "style-loader"
+      })
 
     }, {
       test: /\.css$/,
@@ -51,7 +60,16 @@ module.exports = {
       ],
     }],
   },
+
+
   plugins: [
+    new ExtractTextPlugin('style.css'),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      "Tether": 'tether',
+    }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({

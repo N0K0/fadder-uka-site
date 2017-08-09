@@ -7,6 +7,8 @@ import createHistory from 'history/createBrowserHistory'
 import configureStore from './store'
 import Routing from './routes'
 import sagas from './sagas'
+import 'bootstrap';
+import './styles/styles.scss'
 
 // Create a history of your choosing (we're using a browser history in this case)
 const history = createHistory()

@@ -10,9 +10,10 @@ import { Route, Switch } from 'react-router-dom'
 import { ConnectedRouter as Router } from 'react-router-redux'
 import { Provider } from 'react-redux'
 import App from './containers/App'
-import Footer from './components/Footer'
 import NavigationBar from './components/NavigationBar'
-
+import Home from './containers/Home'
+import Example from './containers/Example'
+import NotFound from './containers/NotFound'
 
 const appContainerStyling = {
   appContainer: {
@@ -27,13 +28,11 @@ const Routing = ({ store, history }) => (
         <NavigationBar />
         <div style={appContainerStyling.appContainer}>
           <Switch>
-            <Route exact path="/" component={require('react-router-loader?name=home!./containers/Home')} />
-            <Route exact path="/example" component={require('react-router-loader?name=home!./containers/Example')} />
-            <Route exact path="/" component={require('react-router-loader?name=home!./containers/Home')} />
-            <Route component={require('react-router-loader?name=home!./containers/NotFound')} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/example" component={Example} />
+            <Route component={NotFound} />
           </Switch>
         </div>
-        <Footer />
       </App>
     </Router>
   </Provider>

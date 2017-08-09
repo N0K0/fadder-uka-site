@@ -4,12 +4,25 @@ import reactLogo from '../../static/images/react.svg'
 import reduxLogo from '../../static/images/redux.svg'
 import reactRouterLogo from '../../static/images/reactrouter.png'
 import webpackLogo from '../../static/images/webpack.png'
-
+import '../../styles/styles.scss'
+import 'bootstrap'
 
 class Home extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render () {
     return (
       <div className={styles.appContainer}>
+        <button type="button" className="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+          Tooltip on top
+        </button>
+        <button type="button" className="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+          Tooltip on right
+        </button>
+        <button type="button" className="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+          Tooltip on bottom
+        </button>
+        <button type="button" className="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+          Tooltip on left
+        </button>
         <div className={styles.appIntroBanner}>
           <img
             src={reactLogo}
@@ -17,7 +30,7 @@ class Home extends React.Component { // eslint-disable-line react/prefer-statele
               height: 100,
             }}
           />
-          <h2>React Redux Router 4 Boilerplate</h2>
+          <h2 className="container">React Redux Router 4 Boilerplate</h2>
           <p>Boilerplate built on best principles and practices</p>
           <a
             target="_blank"
