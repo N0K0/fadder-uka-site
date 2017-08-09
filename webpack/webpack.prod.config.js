@@ -29,17 +29,22 @@ module.exports = {
       test: /\.css$/,
       exclude: /node_modules/,
       loader: ExtractTextPlugin.extract({
-        loader: 'css-loader?modules&-autoprefixer&importLoaders=1!postcss-loader',
+        loader: 'css-loader',
       }),
     }, {
-      test: /\.css$/,
-      include: /node_modules/,
-      loader: ['style-loader', 'css-loader'],
-    }, {
+      test: /\.scss$/,
+      use: [{
+        loader: 'style-loader', // creates style nodes from JS strings
+      }, {
+        loader: 'css-loader?modules&importLoaders=1&localIdentName=[hash:base64:8]', // translates CSS into CommonJS
+      }, {
+        loader: 'sass-loader', // compiles Sass to CSS
+      }]
+    },{
       test: /\.(jpe?g|png|gif|svg)$/,
       loaders: [
         'file-loader',
-        'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}',
+        'image-webpack-loader?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}',
       ],
     }],
   },

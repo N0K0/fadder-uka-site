@@ -24,6 +24,5 @@
 }
 
 .navigationBar__link__active {
-  composes: navigationBar__link;
   color: black;
 }
