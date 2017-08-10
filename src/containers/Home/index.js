@@ -1,89 +1,47 @@
 import React from 'react'
-import styles from './style.css'
 import reactLogo from '../../static/images/react.svg'
 import reduxLogo from '../../static/images/redux.svg'
 import reactRouterLogo from '../../static/images/reactrouter.png'
 import webpackLogo from '../../static/images/webpack.png'
 import '../../styles/styles.scss'
 import 'bootstrap'
+import HomeCard from '../../components/HomeCard'
 
-class Home extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class Home extends React.Component {
   render () {
     return (
-      <div className={styles.appContainer}>
-        <button type="button" className="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-          Tooltip on top
-        </button>
-        <button type="button" className="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
-          Tooltip on right
-        </button>
-        <button type="button" className="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-          Tooltip on bottom
-        </button>
-        <button type="button" className="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
-          Tooltip on left
-        </button>
-        <div className={styles.appIntroBanner}>
-          <img
-            src={reactLogo}
-            style={{
-              height: 100,
-            }}
-          />
-          <h2 className="container">React Redux Router 4 Boilerplate</h2>
-          <p>Boilerplate built on best principles and practices</p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/paulxuca/react-router-redux-saga-4"
-          >
-            Source on Github
-          </a>
+      <div className="container-fluid">
+        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+          <div className="carousel-inner" role="listbox">
+            <div className="carousel-item active">
+              <img className="d-block" src={require('../../static/images/ifi/ifi-2-001.jpg')} />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block" src={require('../../static/images/ifi/ifi-2-002.jpg')} />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block" src={require('../../static/images/ifi/ifi-2-003.jpg')} />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block" src={require('../../static/images/ifi/ifi-2-004.jpg')} />
+            </div>
+            <div className="carousel-item">
+              <img className="d-block" src={require('../../static/images/ifi/ifi-2-005.jpg')} />
+            </div>
+          </div>
         </div>
-        <div className={styles.appIntroSection}>
-          <h5 className={styles.appIntroSection__header}>Whats included</h5>
-          <hr className={styles.appIntroSection__headerDivider} />
-          <div className={styles.appIntroSection__features}>
-            <div className={styles.appIntroSection__feature}>
-              <img
-                src={reactLogo}
-                style={{
-                  height: 50,
-                }}
-              />
-              <p>React</p>
-              <small>UI Library</small>
-            </div>
-            <div className={styles.appIntroSection__feature}>
-              <img
-                src={reduxLogo}
-                style={{
-                  height: 50,
-                }}
-              />
-              <p>Redux // Saga</p>
-              <small>State Management</small>
-            </div>
-            <div className={styles.appIntroSection__feature}>
-              <img
-                src={reactRouterLogo}
-                style={{
-                  height: 50,
-                }}
-              />
-              <p>React Router 4</p>
-              <small>Routing Management</small>
-            </div>
-            <div className={styles.appIntroSection__feature}>
-              <img
-                src={webpackLogo}
-                style={{
-                  height: 50,
-                }}
-              />
-              <p>Webpack 2</p>
-              <small>Module Bundler</small>
-            </div>
+        <div className="main-text">
+          <div className="col-md-12 text-center">
+            <h1>
+              Velkommen til Fadderuka 2017!
+            </h1>
+          </div>
+        </div>
+        <div className="container-fluid">
+          <div className="home-text-area">
+            <HomeCard imageLink={require("../../static/images/eventer.jpg")} linkTarget="/events" title="Hva skjer i fadderuken?" text="Det er utrolig mye kult som skjer i løpet av fadderuken, sjekk timeplanen her!"/>
+            <HomeCard imageLink={require("../../static/images/eventer.jpg")} linkTarget="/buddyContact" title="Mistet faddergruppen din?" text="En gang i ny og ne så forsvinner man fra gruppa, men frykt ei! Vi har selvfølegelig en kontaktliste"/>
+            <HomeCard imageLink={require("../../static/images/eventer.jpg")} linkTarget="/board" title="Om fadderstyret" text="Hvem er fjesene bak fadderuken ved IFI?"/>
           </div>
         </div>
       </div>

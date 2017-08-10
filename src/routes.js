@@ -12,24 +12,27 @@ import { Provider } from 'react-redux'
 import App from './containers/App'
 import NavigationBar from './components/NavigationBar'
 import Home from './containers/Home'
-import Example from './containers/Example'
+import Contact from './containers/Contact'
+import Events from './containers/Events'
+import Links from './containers/Links'
+import Buddy from './containers/Buddy'
+import Board from './containers/Board'
 import NotFound from './containers/NotFound'
 
-const appContainerStyling = {
-  appContainer: {
-    marginTop: 50,
-  },
-}
 
 const Routing = ({ store, history }) => (
   <Provider store={store}>
     <Router history={history}>
       <App>
         <NavigationBar />
-        <div style={appContainerStyling.appContainer}>
+        <div>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/example" component={Example} />
+            <Route exact path="/events" component={Events} />
+            <Route exact path="/links" component={Links} />
+            <Route exact path="/findBuddy" component={Buddy} />
+            <Route exact path="/board" component={Board} />
+            <Route exact path="/contact" component={Contact} />
             <Route component={NotFound} />
           </Switch>
         </div>
