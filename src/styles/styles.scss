@@ -1,15 +1,12 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "home";
-
-$color-red: rgb(237, 28, 36);
-$color-black: rgb(42,42,42);
-$color-light: white;
+@import "board";
+@import "colors";
 
 .main-container {
   min-height: 100vh;
   align-content: center;
   padding-bottom: 10vh;
-
   background: linear-gradient(353deg, $white, lighten($gray,30));
   background-size: 400% 400%;
 
@@ -32,7 +29,6 @@ $color-light: white;
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
   }
-
 }
 
 .container-fluid {
@@ -66,21 +62,14 @@ $color-light: white;
   }
 }
 
-a.card {
-  color: black;
-  background-color: transparentize(white,0.8);
-  margin: 10px;
+.header-bar {
+  background-color: $color-red;
 }
-
-a.card:hover {
-  background-color: transparentize(white,0.2);
-}
-
 
 .bg-faded {
   background-color: transparent;
 }
 
 .navbar {
-  height: 5vh;
+  min-height: 5vh;
 }
