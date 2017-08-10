@@ -5,30 +5,81 @@ $color-red: rgb(237, 28, 36);
 $color-black: rgb(42,42,42);
 $color-light: white;
 
-.bg-primary {
-  color: black !important;
-}
-
 .main-container {
   min-height: 100vh;
-  background: linear-gradient(270deg, whitesmoke, ghostwhite);
   align-content: center;
+  padding-bottom: 10vh;
+
+  background: linear-gradient(353deg, $white, lighten($gray,30));
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 27s ease infinite;
+  -moz-animation: AnimationName 27s ease infinite;
+  animation: AnimationName 27s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+  }
+  @-moz-keyframes AnimationName {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+  }
+  @keyframes AnimationName {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+  }
+
 }
 
 .container-fluid {
   max-width: 1000px;
 }
 
-.link-active {
-  color: black;
-  font-weight: bold;
+@include media-breakpoint-up(sm) {
+  .home-text-area {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-evenly;
+  }
 }
 
-.link-inactive {
-  color: black;
+@include media-breakpoint-down(sm) {
+  .home-text-area {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+  }
 }
 
-.home-text-area {
-  margin-top: 1rem;
-  margin-bottom: auto;
+@include media-breakpoint-down(xs) {
+  .home-text-area {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+a.card {
+  color: black;
+  background-color: transparentize(white,0.8);
+}
+
+a.card:hover {
+  background-color: transparentize(white,0.2);
+}
+
+
+.bg-faded {
+  background-color: transparent;
+}
+
+.navbar {
+  height: 5vh;
 }
