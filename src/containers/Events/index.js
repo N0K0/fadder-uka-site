@@ -6,11 +6,17 @@ import webpackLogo from '../../static/images/webpack.png'
 import '../../styles/styles.scss'
 import 'bootstrap'
 import HomeCard from '../../components/HomeCard'
+import {listOfDays, events} from "./constants"
+import EventDayslot from "../../components/EventDayslot"
+
 class Home extends React.Component {
   render () {
     return (
       <div className="container-fluid">
-        Eventpage
+        <h1>Hva skjer i fadderuken?</h1>
+        <div className="event-week">
+          {listOfDays.map( dayKey => <EventDayslot key={dayKey} dayString={dayKey} events={events[dayKey]} /> )}
+        </div>
       </div>
     )
   }

@@ -9,7 +9,7 @@ const HomeCard = ({title, text, linkTarget, imageLink}) =>
       <img className="card-img-top img-fluid" src={imageLink} alt={title} />
       <div className="card-block clearfix">
         <h4 className="card-title">{title}</h4>
-        <p className="card-text fade">{text}</p>
+        <p className="card-text">{text}</p>
       </div>
     </Link>
 

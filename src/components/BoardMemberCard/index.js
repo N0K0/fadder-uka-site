@@ -9,7 +9,7 @@ const BoardMemberCard = ({name, title, imageLink}) =>
       <img className="card-img-top" src={imageLink} alt={name} />
       <div className="card-block clearfix">
         <h4 className="card-title">{name}</h4>
-        <p className="card-text fade">{title}</p>
+        <p className="card-text">{title}</p>
       </div>
     </div>
 

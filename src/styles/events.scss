@@ -1,0 +1,74 @@
+@import "colors";
+.event-day { // Common styles in here. Then scaling stuff on the lower parts
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+}
+
+.event-list {
+  border: 1px solid;
+  border-collapse: collapse;
+  height: 100%;
+}
+
+.event-day-title {
+  text-align: center;
+}
+
+.event-timeslot {
+  p {
+    margin: 0;
+    overflow-wrap: break-word;
+  }
+}
+
+.timeslot {
+  color: white;
+}
+
+.bachelor{
+  background-color: #f16660;
+}
+
+.master{
+  background-color: #39b54a;
+}
+
+.all {
+  background-color: #58595b;
+}
+
+.gold {
+  background-color: #1c75bc;
+}
+
+
+@include media-breakpoint-up(sm) { // Larger than phone
+  .event-week {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+
+
+  .event-day-title {
+    justify-content: center;
+  }
+
+}
+
+@include media-breakpoint-down(sm) { // Phone sized
+  .event-week {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+  }
+
+  .event-day-title {
+    justify-content: center;
+    background-color: $color-red;
+    margin-top:2rem;
+    margin-bottom:2rem;
+    padding: 1rem;
+  }
+}
