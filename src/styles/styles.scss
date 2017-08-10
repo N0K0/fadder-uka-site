@@ -69,6 +69,7 @@ $color-light: white;
 a.card {
   color: black;
   background-color: transparentize(white,0.8);
+  margin: 10px;
 }
 
 a.card:hover {

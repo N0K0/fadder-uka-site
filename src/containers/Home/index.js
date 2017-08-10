@@ -6,6 +6,7 @@ import webpackLogo from '../../static/images/webpack.png'
 import '../../styles/styles.scss'
 import 'bootstrap'
 import HomeCard from '../../components/HomeCard'
+
 class Home extends React.Component {
   render () {
     return (
@@ -32,7 +33,7 @@ class Home extends React.Component {
         <div className="main-text">
           <div className="col-md-12 text-center">
             <h1>
-              Velkommen til Fadderuka 2017
+              Velkommen til Fadderuka 2017!
             </h1>
           </div>
         </div>
