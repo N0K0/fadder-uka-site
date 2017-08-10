@@ -13,23 +13,19 @@ import App from './containers/App'
 import NavigationBar from './components/NavigationBar'
 import Home from './containers/Home'
 import Example from './containers/Example'
+import Contact from './containers/Contact'
 import NotFound from './containers/NotFound'
-
-const appContainerStyling = {
-  appContainer: {
-    marginTop: 50,
-  },
-}
 
 const Routing = ({ store, history }) => (
   <Provider store={store}>
     <Router history={history}>
       <App>
         <NavigationBar />
-        <div style={appContainerStyling.appContainer}>
+        <div>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/example" component={Example} />
+            <Route exact path="/contact" component={Contact} />
             <Route component={NotFound} />
           </Switch>
         </div>

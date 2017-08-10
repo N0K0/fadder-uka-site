@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react'
-import styles from './styles.css'
 import style from '../../styles/styles.scss'
 class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render () {
     return (
-      <div className=''>
+      <div className="main-container">
         {this.props.children}
       </div>
     )

@@ -1,1 +1,34 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import "home";
+
+$color-red: rgb(237, 28, 36);
+$color-black: rgb(42,42,42);
+$color-light: white;
+
+.bg-primary {
+  color: black !important;
+}
+
+.main-container {
+  min-height: 100vh;
+  background: linear-gradient(270deg, whitesmoke, ghostwhite);
+  align-content: center;
+}
+
+.container-fluid {
+  max-width: 1000px;
+}
+
+.link-active {
+  color: black;
+  font-weight: bold;
+}
+
+.link-inactive {
+  color: black;
+}
+
+.home-text-area {
+  margin-top: 1rem;
+  margin-bottom: auto;
+}

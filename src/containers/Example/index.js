@@ -50,7 +50,7 @@ export default class Example extends React.PureComponent { // eslint-disable-lin
     const { queriedUsername, fetchData, fetchErrors } = this.props.exampleState
     return (
       <div className={styles.exampleContainer}>
-        <h2>Async Redux Saga Exampleasd</h2>
+        <h2>Async Redux Saga Example</h2>
         <p>Type in a github username to see their starred repositories.</p>
         <input
           type="text"

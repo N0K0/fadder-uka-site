@@ -1,0 +1,25 @@
+.main-text
+{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel {
+  width: 100%;
+  background-color: black;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  height: auto;
+  line-height: 1;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.container-fluid {
+  padding: 0px;
+}

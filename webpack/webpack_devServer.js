@@ -13,4 +13,5 @@ new WebpackDevServer(webpack(config), {
     process.exit(0)
   }
   console.log(`Listening to http://localhost:${PORT}`)  // eslint-disable-line
+  console.log(`Building webpack...`)  // eslint-disable-line
 })
