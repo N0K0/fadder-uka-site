@@ -31,3 +31,10 @@ a.home-card {
 a.home-card:hover {
   background-color: transparentize(white,0.2);
 }
+
+
+.nav-item {
+  label {
+    height: 100%;
+  }
+}

@@ -1,8 +1,6 @@
 import React from 'react'
 import { NavLink as Link } from 'react-router-dom'
 import 'bootstrap'
-import '../../styles/styles.scss'
-
 const NavigationBar = () => (
   <div className="d-block header-bar">
     <div className="container">
@@ -12,36 +10,38 @@ const NavigationBar = () => (
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav nav">
-            <li className="nav-item">
-              <Link activeClassName='active' className='nav-link' exact to="/">
+            <Link activeClassName='active' className='nav-link' exact to="/">
+              <li className="nav-item">
                 Hjem
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link activeClassName='nav-link active' className='nav-link' exact to="/events">
-                Timeplan
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link activeClassName='nav-link active' className='nav-link' exact to="/links">
-                Nyttige Lenker
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link activeClassName='nav-link active' className='nav-link' exact to="/findBuddy">
-                Mistet faddergruppen din?
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link activeClassName='nav-link active' className='nav-link' exact to="/board">
-                Om fadderstyret
-              </Link>
-            </li>
+              </li>
+            </Link>
+            <Link activeClassName='nav-link active' className='nav-link' exact to="/events">
+              <li className="nav-item">
+                  Timeplan
+              </li>
+            </Link>
+            <Link activeClassName='nav-link active' className='nav-link' exact to="/links">
+              <li className="nav-item">
+                  Nyttige Lenker
+              </li>
+            </Link>
+            <Link activeClassName='nav-link active' className='nav-link' exact to="/findBuddy">
+              <li className="nav-item">
+                  Mistet faddergruppen din?
+              </li>
+            </Link>
+            <Link activeClassName='nav-link active' className='nav-link' exact to="/board">
+              <li className="nav-item">
+                  Om fadderstyret
+              </li>
+            </Link>
           </ul>
         </div>
       </nav>
     </div>
   </div>
 )
+
+import '../../styles/styles.scss'
 
 export default NavigationBar

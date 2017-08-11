@@ -28,7 +28,8 @@ $timeslot-padding: 2px;
 .event-timeslot {
   p {
     overflow-wrap: break-word;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
+    padding: 0px;
   }
 
   a {
@@ -36,8 +37,10 @@ $timeslot-padding: 2px;
     text-decoration: underline;
   }
 
-  padding-right:  0.3em;
+  padding-right: 0.3em;
   padding-left: 0.3em;
+  margin-bottom: 0.3em;
+  padding-bottom: 0.3em;
 }
 
 .timeslot {
