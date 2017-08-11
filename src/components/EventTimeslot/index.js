@@ -12,8 +12,8 @@ import '../../styles/styles.scss'
  */
 
 const EventTimeslot = ({eventType, timeslot, text, externalEventLink}) =>
-  <div className="d-block align-content-center event-timeslot text-center">
-    <p className={'timeslot ' + eventType}>
+  <div className={"d-block align-content-center event-timeslot text-center " + eventType}>
+    <p className='timeslot'>
       {timeslot}
     </p>
     {

@@ -1,3 +1,11 @@
+export const dayTranslateEnum = {
+  "monday": "Mandag",
+  "tuesday": "Tirsdag",
+  "wednesday": "Onsdag",
+  "thursday": "Torsdag",
+  "friday": "Fredag",
+}
+
 export const listOfDays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
 
 export const events = {

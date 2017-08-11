@@ -7,7 +7,16 @@
 .main-container {
   min-height: 100vh;
   align-content: center;
-  background: whitesmoke;
+  background: linear-gradient(178deg, #7f0000, #f05545);
+  background-size: 200% 200%;
+
+  animation: AnimationName 32s ease infinite;
+
+  @keyframes AnimationName {
+    0%{background-position:69% 0%}
+    50%{background-position:32% 100%}
+    100%{background-position:69% 0%}
+  }
 }
 
 .container-fluid {
@@ -18,11 +27,10 @@
   .home-text-area {
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: 33% auto 33%;
+    grid-template-columns: 33% 33% 33%;
     justify-content: space-evenly;
+
   }
-
-
 }
 
 @include media-breakpoint-down(sm) {
@@ -44,7 +52,7 @@
 }
 
 .header-bar {
-  background-color: $color-red;
+  background-color: $color-primary-dark;
   min-height: 3.5rem;
 }
 
@@ -52,3 +60,12 @@
   background-color: transparent;
 }
 
+.container-fluid {
+  padding: 0px;
+}
+
+h1 {
+  color: white;
+  margin: 0px;
+  padding: 1rem;
+}

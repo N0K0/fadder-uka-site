@@ -6,7 +6,7 @@ import '../../styles/styles.scss'
 const NavigationBar = () => (
   <div className="d-block header-bar">
     <div className="container">
-      <nav className="navbar navbar-toggleable navbar-light bg-faded" role="navigation">
+      <nav className="navbar navbar-toggleable navbar-inverse bg-faded" role="navigation">
         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"/>
         </button>

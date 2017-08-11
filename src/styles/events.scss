@@ -1,25 +1,43 @@
 @import "colors";
+
+$timeslot-padding: 2px;
+
+.event-week {
+}
+
 .event-day { // Common styles in here. Then scaling stuff on the lower parts
   display: flex;
   flex-direction: column;
   align-content: stretch;
+  color: white;
+  padding: $timeslot-padding;
 }
 
 .event-list {
-  border: 1px solid;
-  border-collapse: collapse;
   height: 100%;
+  color: $black;
 }
 
 .event-day-title {
   text-align: center;
+  background-color: $color-secondary-dark;
+  padding: 1rem;
+  margin-bottom: 0px;
 }
 
 .event-timeslot {
   p {
-    margin: 0;
     overflow-wrap: break-word;
+    margin-bottom: 4px;
   }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  padding-right:  0.3em;
+  padding-left: 0.3em;
 }
 
 .timeslot {
@@ -28,20 +46,23 @@
 
 .bachelor{
   background-color: #f16660;
+  color: white;
 }
 
 .master{
   background-color: #39b54a;
+  color: white;
 }
 
 .all {
   background-color: #58595b;
+  color: white;
 }
 
 .gold {
   background-color: #1c75bc;
+  color: white;
 }
-
 
 @include media-breakpoint-up(sm) { // Larger than phone
   .event-week {
@@ -49,7 +70,6 @@
     grid-auto-flow: row;
     grid-template-columns: 20% 20% 20% 20% 20%;
   }
-
 
   .event-day-title {
     justify-content: center;
@@ -66,9 +86,11 @@
 
   .event-day-title {
     justify-content: center;
-    background-color: $color-red;
     margin-top:2rem;
-    margin-bottom:2rem;
     padding: 1rem;
+  }
+
+  .event-day {
+    padding: 0px;
   }
 }

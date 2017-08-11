@@ -11,10 +11,6 @@ class Board extends React.Component {
           <h1 className="d-block bg-faded">
             Styret
           </h1>
-          <p>
-            Lurer du på hvem som er bakmennene bak denne fadderuka?
-          </p>
-
           <div className="container-fluid">
             <div className="home-text-area">
               <BoardMemberCard imageLink={require("../../static/images/faces/portrait-1.jpeg")} name="Emilie Mæhlum" title="Styremedlem"/>
