@@ -6,7 +6,6 @@ import { AppContainer } from 'react-hot-loader'
 import createHistory from 'history/createBrowserHistory'
 import configureStore from './store'
 import Routing from './routes'
-import sagas from './sagas'
 import 'bootstrap';
 import './styles/styles.scss'
 
@@ -14,7 +13,6 @@ import './styles/styles.scss'
 const history = createHistory()
 
 const store = configureStore({}, history)
-store.runSaga(sagas)
 
 const render = Component => {
   ReactDOM.render(

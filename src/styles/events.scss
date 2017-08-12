@@ -1,0 +1,99 @@
+@import "colors";
+
+$timeslot-padding: 2px;
+
+.event-week {
+}
+
+.event-day { // Common styles in here. Then scaling stuff on the lower parts
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  color: white;
+  padding: $timeslot-padding;
+}
+
+.event-list {
+  height: 100%;
+  color: $black;
+}
+
+.event-day-title {
+  text-align: center;
+  background-color: $color-secondary-dark;
+  padding: 1rem;
+  margin-bottom: 0px;
+}
+
+.event-timeslot {
+  p {
+    overflow-wrap: break-word;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+  margin-bottom: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.timeslot {
+  color: white;
+}
+
+.bachelor{
+  background-color: #f16660;
+  color: white;
+}
+
+.master{
+  background-color: #39b54a;
+  color: white;
+}
+
+.all {
+  background-color: #58595b;
+  color: white;
+}
+
+.gold {
+  background-color: #1c75bc;
+  color: white;
+}
+
+@include media-breakpoint-up(sm) { // Larger than phone
+  .event-week {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+
+  .event-day-title {
+    justify-content: center;
+  }
+
+}
+
+@include media-breakpoint-down(sm) { // Phone sized
+  .event-week {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+  }
+
+  .event-day-title {
+    justify-content: center;
+    margin-top:2rem;
+    padding: 1rem;
+  }
+
+  .event-day {
+    padding: 0px;
+  }
+}

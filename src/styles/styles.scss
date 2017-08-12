@@ -1,42 +1,26 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "home";
-
-$color-red: rgb(237, 28, 36);
-$color-black: rgb(42,42,42);
-$color-light: white;
+@import "board";
+@import "colors";
+@import "events";
 
 .main-container {
   min-height: 100vh;
   align-content: center;
-  padding-bottom: 10vh;
+  background: linear-gradient(178deg, #7f0000, #f05545);
+  background-size: 200% 200%;
 
-  background: linear-gradient(353deg, $white, lighten($gray,30));
-  background-size: 400% 400%;
+  animation: AnimationName 32s ease infinite;
 
-  -webkit-animation: AnimationName 27s ease infinite;
-  -moz-animation: AnimationName 27s ease infinite;
-  animation: AnimationName 27s ease infinite;
-
-  @-webkit-keyframes AnimationName {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-  }
-  @-moz-keyframes AnimationName {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-  }
   @keyframes AnimationName {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+    0%{background-position:69% 0%}
+    50%{background-position:32% 100%}
+    100%{background-position:69% 0%}
   }
-
 }
 
 .container-fluid {
-  max-width: 1000px;
+  max-width: 1000px; /* This is due to the image size */
 }
 
 @include media-breakpoint-up(sm) {
@@ -45,6 +29,7 @@ $color-light: white;
     grid-auto-flow: row;
     grid-template-columns: 33% 33% 33%;
     justify-content: space-evenly;
+
   }
 }
 
@@ -66,21 +51,59 @@ $color-light: white;
   }
 }
 
-a.card {
-  color: black;
-  background-color: transparentize(white,0.8);
-  margin: 10px;
+.header-bar {
+  background-color: $color-primary-dark;
+  min-height: 3.5rem;
 }
-
-a.card:hover {
-  background-color: transparentize(white,0.2);
-}
-
 
 .bg-faded {
   background-color: transparent;
 }
 
-.navbar {
-  height: 5vh;
+.container-fluid {
+  padding: 0px;
+}
+
+h1 {
+  color: white;
+  margin: 0px;
+  padding: 1rem;
+}
+
+h3 {
+  color: white;
+  margin: 0px;
+  padding: 1rem;
+  padding-left: 0;
+}
+
+.active {
+  background-color: $color-primary;
+}
+
+.title {
+  width: auto;  /* Or whatever */
+  height: 100%; /* Or whatever */
+  margin: auto;  /* Magic! */
+}
+
+a {
+  color: $color-blue;
+  margin: 0px;
+}
+
+.link-area {
+  padding: 1rem;
+  margin: 0px;
+}
+
+p {
+  color: white;
+}
+
+.link-card {
+  color: white;
+  background-color: transparentize($color-secondary-dark, 0.8);
+  margin: 10px;
+  padding: 10px;
 }

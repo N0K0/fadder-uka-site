@@ -31,7 +31,7 @@ class Home extends React.Component {
           </div>
         </div>
         <div className="main-text">
-          <div className="col-md-12 text-center">
+          <div className="d-block text-center">
             <h1>
               Velkommen til Fadderuka 2017!
             </h1>
